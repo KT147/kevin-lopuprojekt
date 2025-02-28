@@ -22,16 +22,16 @@ function MemoryGame() {
     const [flippedCards, setFlippedCards] = useState([])
     const [matchedCards, setMatchedCards] = useState([])
 
-      const handleCardClick = (index) => {
+    const handleCardClick = (index) => {
         if (flippedCards.length === 2 || flippedCards.includes(index) || matchedCards.includes(index)) {
-            return
-        }
+        return
+    }
     
-        const newFlippedCards = [...flippedCards, index]
+    const newFlippedCards = [...flippedCards, index]
         setFlippedCards(newFlippedCards)
-      }
+    }
 
-      useEffect(() => {
+    useEffect(() => {
         if (flippedCards.length === 2) {
             const [firstIndex, secondIndex] = flippedCards
             if (cards[firstIndex].value === cards[secondIndex].value) {

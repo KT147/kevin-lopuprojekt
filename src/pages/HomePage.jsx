@@ -11,6 +11,14 @@ function HomePage() {
         <Link to="/memory-game">
             <button>Mälumäng</button>
         </Link>
+
+        <Link to="/rock-paper-scissors">
+            <button>Kivi-paber-käärid</button>
+        </Link>
+
+        <Link to="/facts">
+            <button>Põnevad teadmised</button>
+        </Link>
     </div>
   )
 }

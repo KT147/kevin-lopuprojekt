@@ -1,4 +1,7 @@
 import { useRef, useState } from "react"
+import './guessnumber.css'
+import winPicture from "../assets/ivo-voit.png"
+import orgPicture from "../assets/ivo.png"
 
 function GuessNumber() {
     const [number, setNumber] = useState(Math.floor(Math.random() * 100) +1)
@@ -10,38 +13,43 @@ function GuessNumber() {
     
     const sisesta = () => {
         if (numberRef.current.value > number) {
-            setMessage("Äi oo. Liiga palju!")
+            setMessage("Äi, äi. Nönna palju küll mette!")
             setpoints(points - 10)
         }
         else if (numberRef.current.value < number) {
-            setMessage("Äi, äi. Liiga vähe!")
+            setMessage("Äi oo. Vähe, mes vähe!")
             setpoints(points - 10)
         }
         else {
-            setMessage("Ojaa! Öige nummer!")
+            setMessage("Kena! Öige nummer!")
             setScore(score + points)
         }
         numberRef.current.value = ""
     }
 
     const newGame = () => {
-        setNumber(Math.floor(Math.random() * 10) +1)
+        setNumber(Math.floor(Math.random() * 100) +1)
         setMessage()
         setpoints(100)
-        numberRef.current.value = ""
     }
 
 
   return (
     <div>
+        <div>{number}</div>
         <div>Skoor: {score}</div>
         <div>Punktid: {points}</div>
-        {message === "Ojaa! Öige nummer!" && <button onClick={newGame}>Uus mäng</button>}
+        {message === "Kena! Öige nummer!" && <button onClick={newGame}>Uus mäng</button>} <br />
+        {message === "Kena! Öige nummer!" && <img className="win-picture" src={winPicture} alt="" />}
         <div>{message}</div>
-        <div>{number}</div>
-        <label>Arva number 1st 100ni</label><br />
-        <input ref={numberRef}type="number" /><br />
-        <button onClick={sisesta}>Sisesta</button>
+        {message !== "Kena! Öige nummer!" && 
+        (<>
+            <div>Arva nummer 1st 100ni</div><br />
+            <img className="org-picture" src={orgPicture} /> <br />
+            <input ref={numberRef}type="number" /><br />
+            <button onClick={sisesta}>Sisesta</button>
+        </>
+        )}
     </div>
   )
 }
