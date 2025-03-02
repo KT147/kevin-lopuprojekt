@@ -16,6 +16,14 @@ function HomePage() {
             <button>Kivi-paber-käärid</button>
         </Link>
 
+        <Link to="/hangman">
+            <button>Sõnamäng</button>
+        </Link>
+
+        <Link to="/math-game">
+            <button>Peastarvutamine</button>
+        </Link>
+
         <Link to="/facts">
             <button>Põnevad teadmised</button>
         </Link>
