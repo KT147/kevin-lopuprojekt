@@ -36,7 +36,6 @@ function GuessNumber() {
 
   return (
     <div>
-        <div>{number}</div>
         <div>Skoor: {score}</div>
         <div>Punktid: {points}</div>
         {message === "Kena! Öige nummer!" && <button onClick={newGame}>Uus mäng</button>} <br />
@@ -44,7 +43,7 @@ function GuessNumber() {
         <div>{message}</div>
         {message !== "Kena! Öige nummer!" && 
         (<>
-            <div>Arva nummer 1st 100ni</div><br />
+            <div>Ma reegi soole nüüd ühe loo! Mo peas oo üks nummer 1st 100ni. Sa proovi see nüüd ää arvata.</div><br />
             <img className="org-picture" src={orgPicture} /> <br />
             <input ref={numberRef}type="number" /><br />
             <button onClick={sisesta}>Sisesta</button>

@@ -7,6 +7,7 @@ import RockPaperScissors from './pages/RockPaperScissors'
 import InterestingFact from './pages/InterestingFact'
 import HangMan from './pages/HangMan'
 import MathGame from './pages/MathGame'
+import BlackJack from './pages/BlackJack'
 
 function App() {
   
@@ -20,6 +21,7 @@ function App() {
         <Route path="/rock-paper-scissors" exact element={<RockPaperScissors/>}/>
         <Route path="/hangman" exact element={<HangMan/>}/>
         <Route path="/math-game" exact element={<MathGame/>}/>
+        <Route path="/blackjack" exact element={<BlackJack/>}/>
         <Route path="/facts" exact element={<InterestingFact/>}/>
      </Routes>
     </>

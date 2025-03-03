@@ -24,6 +24,10 @@ function HomePage() {
             <button>Peastarvutamine</button>
         </Link>
 
+        <Link to="/blackjack">
+            <button>BlackJack</button>
+        </Link>
+
         <Link to="/facts">
             <button>Põnevad teadmised</button>
         </Link>
