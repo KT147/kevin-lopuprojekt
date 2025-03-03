@@ -1,33 +1,35 @@
 import React, { useState } from 'react'
-import { useEffect } from 'react';
+import "./interestingfact.css"
 
 function InterestingFact() {
 
     const [fact, setFact] = useState("")
     const [joke, setJoke] = useState("")
-
-    useEffect(() => {
-      }, [])
+    const [isFact, setIsFact] = useState(true)
 
     const fetchNewFact = () => {
         fetch("https://uselessfacts.jsph.pl/api/v2/facts/random")
         .then (res => res.json())
         .then (json => setFact(json.text))
+        setIsFact(true)
     }
 
     const fetchNewJoke = () => {
         fetch("https://api.chucknorris.io/jokes/random")
         .then (res => res.json())
         .then (json => setJoke(json.value))
+        setIsFact(false)
     }
 
   return (
     <div>
         <button onClick={fetchNewFact}>Vajuta siia ja õpi</button>
-        <div>{fact}</div>
-        <br /><br />
         <button onClick={fetchNewJoke}>Vajuta siia ja saad naerda</button>
-        <div>{joke}</div>
+        <div className='background'>
+          <div className='text'>
+          {isFact ? fact : joke}
+          </div>
+        </div>
     </div>
   )
 }

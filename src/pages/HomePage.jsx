@@ -28,6 +28,10 @@ function HomePage() {
             <button>BlackJack</button>
         </Link>
 
+        <Link to="/do-you-remember">
+            <button>Testi oma mälu</button>
+        </Link>
+
         <Link to="/facts">
             <button>Põnevad teadmised</button>
         </Link>

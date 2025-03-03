@@ -8,6 +8,7 @@ import InterestingFact from './pages/InterestingFact'
 import HangMan from './pages/HangMan'
 import MathGame from './pages/MathGame'
 import BlackJack from './pages/BlackJack'
+import DoYouRemember from './pages/DoYouRemember'
 
 function App() {
   
@@ -22,6 +23,7 @@ function App() {
         <Route path="/hangman" exact element={<HangMan/>}/>
         <Route path="/math-game" exact element={<MathGame/>}/>
         <Route path="/blackjack" exact element={<BlackJack/>}/>
+        <Route path="/do-you-remember" exact element={<DoYouRemember/>}/>
         <Route path="/facts" exact element={<InterestingFact/>}/>
      </Routes>
     </>

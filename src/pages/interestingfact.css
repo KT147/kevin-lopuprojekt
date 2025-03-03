@@ -1,0 +1,8 @@
+.background {
+    background-image: url("/old-paper.png");
+    height: 500px;
+}
+
+.text {
+    position: relative;
+}
