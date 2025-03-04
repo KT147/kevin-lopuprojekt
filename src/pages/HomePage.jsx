@@ -32,6 +32,10 @@ function HomePage() {
             <button>Testi oma mälu</button>
         </Link>
 
+        <Link to="/snake">
+            <button>Ussimäng</button>
+        </Link>
+
         <Link to="/facts">
             <button>Põnevad teadmised</button>
         </Link>
