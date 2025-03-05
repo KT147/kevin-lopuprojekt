@@ -50,6 +50,7 @@ function Snake() {
         context.canvas.height = 500
 
         context.clearRect(0,0, context.canvas.width, context.canvas.height)
+        
         context.fillStyle = "green"
         context.fillRect(food.x * 20, food.y * 20,20,20)
 
@@ -144,10 +145,10 @@ function Snake() {
     <div className='game-container'>
         <h1>Ussimäng</h1>
         <canvas ref={canvasRef} className='canvas'></canvas>
-        <button onClick={() => setDirection('UP')}>↑</button>
-        <button onClick={() => setDirection('LEFT')}>←</button>
-        <button onClick={() => setDirection('RIGHT')}>→</button>
-        <button onClick={() => setDirection('DOWN')}>↓</button>
+        <button className='button' onClick={() => setDirection('UP')}>↑</button>
+        <span><button className='button' onClick={() => setDirection('LEFT')}>←</button>
+        <button className='button-right' onClick={() => setDirection('RIGHT')}>→</button></span>
+        <button className='button' onClick={() => setDirection('DOWN')}>↓</button>
     </div>
   )
 }

@@ -10,12 +10,14 @@ import MathGame from './pages/MathGame'
 import BlackJack from './pages/BlackJack'
 import DoYouRemember from './pages/DoYouRemember'
 import Snake from './pages/Snake'
+import SlidePuzzle from './pages/SlidePuzzle'
 
 function App() {
   
 
   return (
     <>
+      Mängupunker
      <Routes>
         <Route path="/" exact element={<HomePage/>}/>
         <Route path="/guess-number" exact element={<GuessNumber/>}/>
@@ -26,6 +28,7 @@ function App() {
         <Route path="/blackjack" exact element={<BlackJack/>}/>
         <Route path="/do-you-remember" exact element={<DoYouRemember/>}/>
         <Route path="/snake" exact element={<Snake/>}/>
+        <Route path="/slide-puzzle" exact element={<SlidePuzzle/>}/>
         <Route path="/facts" exact element={<InterestingFact/>}/>
      </Routes>
     </>

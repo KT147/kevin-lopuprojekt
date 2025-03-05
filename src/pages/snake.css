@@ -12,3 +12,14 @@
     border: 2px solid #000;
     background-color: black;
 }
+
+.button{
+    height: 100px;
+    width: 100px;
+}
+
+.button-right{
+    height: 100px;
+    width: 100px;
+    margin-left: 20px;
+}

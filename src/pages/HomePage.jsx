@@ -36,6 +36,10 @@ function HomePage() {
             <button>Ussimäng</button>
         </Link>
 
+        <Link to="/slide-puzzle">
+            <button>Numbripusle</button>
+        </Link>
+
         <Link to="/facts">
             <button>Põnevad teadmised</button>
         </Link>
