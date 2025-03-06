@@ -5,7 +5,7 @@ import orgPicture from "../assets/ivo.png"
 
 function GuessNumber() {
     const [number, setNumber] = useState(Math.floor(Math.random() * 100) +1)
-    const [message, setMessage] = useState()
+    const [message, setMessage] = useState("Ma reegi soole nüüd ühe loo! Mo peas oo üks nummer 1st 100ni. Sa proovi see nüüd ää arvata.")
     const [points, setpoints] = useState(100)
     const [score, setScore] = useState(0)
 
@@ -29,23 +29,22 @@ function GuessNumber() {
 
     const newGame = () => {
         setNumber(Math.floor(Math.random() * 100) +1)
-        setMessage()
+        setMessage("Mo peas oo veel üks nummer 1st 100ni. Sa proovi see nüüd jälle ää arvata. Vaata kut palju punkte saad.")
         setpoints(100)
     }
 
 
   return (
-    <div>
-        <div>Skoor: {score}</div>
-        <div>Punktid: {points}</div>
-        {message === "Kena! Öige nummer!" && <button onClick={newGame}>Uus mäng</button>} <br />
-        {message === "Kena! Öige nummer!" && <img className="win-picture" src={winPicture} alt="" />}
-        <div>{message}</div>
+    <div className="page">
+        <div className="score">Skoor: {score}</div>
+        <div className="points">Punkte järel: {points}</div> <br /><br /><br /><br />
+        {message === "Kena! Öige nummer!" && <img className="win-picture" src={winPicture} alt="" /> }<br/>
+        {message === "Kena! Öige nummer!" && <button onClick={newGame}>Uus mäng</button>}
+        <div className="speech-bubble">{message}</div>
         {message !== "Kena! Öige nummer!" && 
         (<>
-            <div>Ma reegi soole nüüd ühe loo! Mo peas oo üks nummer 1st 100ni. Sa proovi see nüüd ää arvata.</div><br />
             <img className="org-picture" src={orgPicture} /> <br />
-            <input ref={numberRef}type="number" /><br />
+            <input className="input" ref={numberRef}type="number" /><br />
             <button onClick={sisesta}>Sisesta</button>
         </>
         )}

@@ -3,7 +3,7 @@
   padding: 2rem;
   text-align: center;
   font-family: 'MyFont';
-  background-image: url("/wallpaper.jpg");
+  background-image: url("/wallpaper.png");
   background-size: cover; 
   background-position: center;
   background-repeat: no-repeat; 
@@ -33,7 +33,6 @@
 .logo-container {
   background-color: rgb(246, 188, 82);
   height: 50px;
-  margin-top: 200px;
+  margin-top: 140px;
   position: relative;
-  max-width: 100%;
 }

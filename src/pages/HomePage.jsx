@@ -1,9 +1,14 @@
 import { Link } from "react-router-dom"
 import './homepage.css'
+import { useState } from "react"
 
 
 function HomePage() {
+    
+    const [message, setMessage] = useState()
+
   return (
+    <>
     <div className="home-container">
         <Link to="/guess-number">
             <div>
@@ -95,6 +100,14 @@ function HomePage() {
             </div>
         </Link>
     </div>
+    <button className="show-more-button" onClick={() => setMessage("Oota veidike. Meie arendajad kirjutavad alles koodi")}>Kuva rohkem</button>
+    {message && (
+    <div className="message-wrapper">
+        <div className="message">{message}</div>
+        <div className="loading">•••</div>
+    </div>  
+)}
+    </>
   )
 }
 

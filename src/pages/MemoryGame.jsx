@@ -56,7 +56,6 @@ function MemoryGame() {
 
   return (
     <div className="memory-game-container">
-       <div>Mälumäng</div>
        <div className="card-container">
         {cards.map((card, index) =>
             <div key={index} onClick={() => handleCardClick(index)} className={`card ${flippedCards.includes(index) || matchedCards.includes(index) ? 'flipped' : ''} ${matchedCards.includes(index) ? 'matched' : ''}`}>

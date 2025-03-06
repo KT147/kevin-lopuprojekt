@@ -7,15 +7,28 @@
     max-width: 600px;
     margin: 0 auto; 
     padding: 200px;
+    margin-top: -50px;
 }
 
 .homepage-pic{
     height: 150px;
     border-radius: 5%;
+    object-fit: cover;
 }
 
 .home-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 250px; 
+    height: 250px;
     background-color: rgb(81, 199, 199);
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
 }
 
 .home-button:hover {
@@ -24,5 +37,56 @@
 
 .home-text {
     color: black;
-    padding-top: 5px;
+    padding-top: 20px;
+    font-size: 20px;
 }
+
+.show-more-button {
+    background-color: rgb(81, 199, 199);
+    color: black;
+    position: relative;
+    top:-150px;
+}
+
+.show-more-button:hover {
+    background-color: rgb(134, 219, 219);
+}
+
+.message {
+    background-color: red;
+    font-size: 18px;
+    width: 500px;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.message-wrapper {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin-top: -130px;
+    margin-bottom: 100px;
+    flex-direction: column;
+}
+
+.loading {
+    font-weight: bold;
+    display: inline-block;
+    font-family: monospace;
+    font-size: 30px;
+    clip-path: inset(0 3ch 0 0);
+    animation: l 1s steps(4, jump-none) infinite;
+    color: white;
+    background-color: red;
+    margin-top: 10px;
+  }
+  
+  @keyframes l {
+    to {
+      clip-path: inset(0)
+    }
+  }

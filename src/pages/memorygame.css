@@ -1,7 +1,7 @@
 
 .memory-game-container {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 150px;
 }
 
 .card-container {
@@ -36,9 +36,8 @@
 
 button {
     padding: 10px 20px;
-    margin-top: 20px;
-    background-color: #4CAF50;
-    color: white;
+    margin-top: 40px;
+    color: black;
     border: none;
     cursor: pointer;
     font-size: 16px;

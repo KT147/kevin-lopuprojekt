@@ -1,3 +1,12 @@
+.page {
+    margin-top: 140px;
+    position: relative;
+}
+
+.button:hover {
+    background-color: rgb(134, 219, 219);
+}
+
 .win-picture{
     height: 250px;
 }
@@ -5,3 +14,53 @@
 .org-picture{
     height: 250px;
 }
+
+.score {
+    font-size: 40px;
+    color: rgb(31, 131, 3);
+    text-decoration: underline;
+}
+
+.points {
+    font-size: 25px;
+    color: rgb(20, 81, 3);
+}
+
+.speech-bubble {
+    background-color: white;
+    color: black;
+    width: 300px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    position: absolute; 
+    top: 30%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+}
+
+.speech-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 15px;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+}
+
+
+.input {
+    margin-top: 10px;
+    width: 50px;
+}
+
+  
+  
+  
+  
