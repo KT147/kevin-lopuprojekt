@@ -1,0 +1,28 @@
+.home-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto; 
+    padding: 200px;
+}
+
+.homepage-pic{
+    height: 150px;
+    border-radius: 5%;
+}
+
+.home-button {
+    background-color: rgb(81, 199, 199);
+}
+
+.home-button:hover {
+    background-color: rgb(134, 219, 219);
+}
+
+.home-text {
+    color: black;
+    padding-top: 5px;
+}

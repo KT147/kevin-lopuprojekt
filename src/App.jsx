@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import './App.css'
 import GuessNumber from './pages/GuessNumber'
 import HomePage from './pages/HomePage'
@@ -17,7 +18,12 @@ function App() {
 
   return (
     <>
-      Mängupunker
+    <div className='logo-container'>
+      <Link to="/">
+        <img className='logo-img' src="/logo.png" alt="" />
+      </Link>
+    </div>
+
      <Routes>
         <Route path="/" exact element={<HomePage/>}/>
         <Route path="/guess-number" exact element={<GuessNumber/>}/>
