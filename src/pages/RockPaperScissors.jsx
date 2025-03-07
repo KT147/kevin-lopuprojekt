@@ -47,29 +47,29 @@ function RockPaperScissors() {
         setPicture(getImage(playersMove))
         const computerMove = randomSelection()
         determineWinner(playersMove, computerMove)
-        
-        setTimeout(() => {
-            setPicture(null)
-            setComputersMove(null)
-        }, 2000);
     }
 
 
     
   return (
-    <div>
-        <div>Sinu käik:</div>
-        <button onClick={() => handleMove("rock")}>Kivi</button>
-        <button onClick={() => handleMove("paper")}>Paber</button>
-        <button onClick={() => handleMove("scissors")}>Käärid</button>
+    <div className='game'>
+        <div className='you'>
+            <div className='your-move'>Sinu käik:</div>
+            <button onClick={() => handleMove("rock")}>Kivi</button>
+            <button onClick={() => handleMove("paper")}>Paber</button>
+            <button onClick={() => handleMove("scissors")}>Käärid</button>
+            <br /> <br />
+            <img className='move' src={picture} />
+        </div>
+        <div className='computer'>
+            <div className='info'>Arvuti:</div>
+            <br /><br /><br /><br />
+            <img className='move' src={computersMove} />
+        </div>
+        <h1>{winner}</h1>
+        <span className='info'>Sina: {playersScore}</span>
         <br />
-        <img className='move' src={picture} />
-        <div>Arvuti:</div>
-        <img className='move' src={computersMove} />
-        <h2>{winner}</h2>
-        <div>Skoor:</div>
-        <span>Sina: {playersScore}</span>
-        <span>Arvuti: {computersScore}</span>
+        <span className='info'>Arvuti: {computersScore}</span>
     </div>
   )
 }

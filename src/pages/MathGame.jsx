@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
+import "./mathgame.css"
 
 function MathGame() {
 
-    const numbers = ["-", 0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, "-"]
 
     const [randomNumberOne, setRandomNumberOne] = useState(null)
     const [randomNumberTwo, setRandomNumberTwo] = useState(null)
@@ -101,21 +102,22 @@ function MathGame() {
     }
 
   return (
-    <div>
-        <h2>Tase {level}</h2>
-       {randomNumberOne}{randomOperation}{randomNumberTwo} = 
-       {enterResult}
-       <br />
-       <button onClick={check}>Kontrolli</button>
-       <br />
-        {numbers.map(number=>
-            <button onClick={() => enter (number)} key={number}>{number}</button>
-        )}
-        <div>{message}</div>
-        <div>Aega järel {seconds} sekundit</div>
-        <div>Punktid {points}</div>
-        <button onClick={generateNewMath}>Uus tehe</button>
-        <div>Skoor {score}</div>
+    <div className='math-game'>
+        <h2>TASE {level}</h2>
+        <div className='math-game-info'>Skoor {score}</div>
+        <div className='math-game-info-seconds'>Aega järel {seconds} sekundit</div>
+        <br />
+       <div className='calculation'>{randomNumberOne}{randomOperation}{randomNumberTwo} = 
+       {enterResult}</div>
+       <div className='button-container'>
+            {numbers.map(number=>
+            <button className='answer-buttons' onClick={() => enter (number)} key={number}>{number}</button>
+            )}
+        <button className='check-button' onClick={check}>Kontrolli</button>
+        </div>
+        <div className='math-game-info'>{message}</div>
+        <div className='math-game-info'>Punktid {points}</div>
+        <button className='new-game-button' onClick={generateNewMath}>Uus tehe</button>
     </div>
   )
 }

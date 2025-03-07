@@ -143,7 +143,6 @@ function Snake() {
 
   return (
     <div className='game-container'>
-        <h1>Ussimäng</h1>
         <canvas ref={canvasRef} className='canvas'></canvas>
         <button className='button' onClick={() => setDirection('UP')}>↑</button>
         <span><button className='button' onClick={() => setDirection('LEFT')}>←</button>

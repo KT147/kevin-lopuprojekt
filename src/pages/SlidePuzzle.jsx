@@ -61,7 +61,6 @@ function SlidePuzzle() {
 
   return (
     <div>
-        <h1>Numbripusle</h1>
         <div className="board">
         {board.map((row, rowIndex) =>
         row.map((tile, colIndex) => (

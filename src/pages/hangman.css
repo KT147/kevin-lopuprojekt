@@ -1,0 +1,36 @@
+.word {
+    margin-top: 150px;
+    color: black;
+    font-size: 80px;
+}
+
+.letters {
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.letter-buttons {
+    font-size: 25px;
+    margin: 10px;
+}
+
+.letter-buttons:disabled {
+    font-size: 25px;
+    margin: 10px;
+    background-color: gray;
+    cursor:auto;
+}
+
+.new-game-button {
+    font-size: 20px;
+}
+
+h3{
+    color: black;
+    font-size: 25px;
+}
+
+h2 {
+    color: black;
+    margin-top: 200px;
+}

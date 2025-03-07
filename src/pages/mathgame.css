@@ -1,0 +1,56 @@
+.math-game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    text-align: center; 
+}
+
+h2 {
+    font-size: 30px;
+    margin-top: 120px;
+}
+
+.calculation {
+    color: black;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    justify-items: center;
+    margin-bottom: 20px; 
+}
+
+.answer-buttons {
+    margin: 0px;
+    font-size: 20px;
+    width: 60px;
+    height: 60px;
+}
+
+.check-button {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    width: 160px; 
+    height: 40px;
+    grid-column: span 3; 
+}
+
+.new-game-button {
+    font-size: 20px;
+}
+
+.math-game-info {
+    color: black;
+    font-size: 20px;
+}
+
+.math-game-info-seconds {
+    color: red;
+    font-size: 20px;
+}

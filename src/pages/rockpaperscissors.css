@@ -1,3 +1,42 @@
+.game {
+    background-color: yellowgreen;
+    border-radius: 2%;
+    position: relative;
+    margin-top: 130px;
+    margin-left: 300px;
+    margin-right: 300px;
+}
+
+.your-move{
+    margin-top: 150px;
+    font-size: 30px;
+}
+
 .move {
     height: 200px;
+}
+
+.info{
+    font-size: 30px;
+}
+
+h1{
+    text-decoration: underline;
+    margin-top: -50px;
+}
+
+.you, .computer {
+    position: relative;
+    display: inline-block; 
+    vertical-align: top; 
+}
+
+.you {
+    margin-right: 200px;
+    top: -100px;
+}
+
+.computer {
+    margin-left: 20px; 
+    margin-top: 50px;
 }

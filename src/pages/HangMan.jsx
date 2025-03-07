@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useEffect } from 'react'
 import wordsJSON from '../data/words.json'
+import "./hangman.css"
 
 function HangMan() {
   const [word, setWord] = useState('')
@@ -42,7 +43,7 @@ function HangMan() {
     return (
       <div>
         <h2>Õige! Sõna oli: {word}</h2>
-        <button onClick={getRandomWord}>Uus mäng</button>
+        <button className='new-game-button' onClick={getRandomWord}>Uus mäng</button>
       </div>
     )
   }
@@ -51,7 +52,7 @@ function HangMan() {
     return (
       <div>
         <h2>Liiga palju eksimusi! Sõna oli: {word}</h2>
-        <button onClick={getRandomWord}>Uus mäng</button>
+        <button className='new-game-button' onClick={getRandomWord}>Uus mäng</button>
       </div>
     )
   }
@@ -59,10 +60,10 @@ function HangMan() {
 
   return (
     <div>
-      <div>{displayWord()}</div>
-      <div>
+      <div className='word'>{displayWord()}</div>
+      <div className='letters'>
         {alphabet.map((letter) => (
-          <button
+          <button className='letter-buttons'
             key={letter}
             onClick={() => handleGuess(letter)}
             disabled={correctGuesses.includes(letter) || wrongGuesses.includes(letter)}>
@@ -71,7 +72,7 @@ function HangMan() {
         ))}
       </div>
       <br /><br />
-      <button onClick={getRandomWord}>Uus mäng</button>
+      <button className='new-game-button' onClick={getRandomWord}>Uus mäng</button>
       <div>
         <h3>Valed pakkumised (max.6): {wrongGuesses.join(', ')}</h3>
       </div>

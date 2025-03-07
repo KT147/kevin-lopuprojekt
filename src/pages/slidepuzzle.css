@@ -3,7 +3,7 @@
     grid-template-columns: repeat(3, 100px);
     grid-gap: 5px;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 200px;
   }
   
   .tile {
