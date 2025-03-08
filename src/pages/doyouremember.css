@@ -1,0 +1,24 @@
+.start-text-container {
+    margin-top: 150px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.start-text-under{
+    color: black;
+    font-size: 18px;
+}
+
+.answers {
+    margin-top: 150px;
+    color: black;
+}
+
+.answers-input {
+    margin-left: 10px;
+}
+
+.questions {
+    margin-top: 200px;
+    color: black;
+}

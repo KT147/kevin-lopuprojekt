@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import "./doyouremember.css"
 
 function DoYouRemember() {
 
@@ -59,27 +60,29 @@ function DoYouRemember() {
   return (
     <div>
       {started === false ? (
-        <>
-          <h3>Räägitakse, et poliitikud ei mäleta tihti, mida nad ütlevad või lubavad. Kas sa suudad oma sõnu meeles pidada?</h3>
-          <div>Kirjuta 5 täiesti suvalist sõna ja siis arvuti kontrollib su mälu. Kui läbid kontrolli edukalt, liigud edasi uude vooru ja kirjutad järgmised 5 sõna. Sedasi kuni eksid.</div>
+        <div className='start-text-container'>
+          <h2>Räägitakse, et poliitikud ei mäleta tihti, mida nad ütlevad või lubavad. Kas sa suudad oma sõnu meeles pidada?</h2>
+          <br />
+          <div className='start-text-under'>Kirjuta 5 täiesti suvalist sõna ja seejärel kontrollib arvuti su mälu. Kui läbid kontrolli edukalt, liigud edasi uude vooru ja kirjutad järgmised 5 sõna. Sedasi kuni eksid.</div>
+          <br />
           <button onClick={startTheGame}>Olen valmis alustama</button>
-        </>
+        </div>
       ) : isQuestionAsked === false ? (
-        <>
+        <div className='answers'>
           {answers.map((answer, index) => (
             <div key={index}>
                 {index +1 + (round -1) * 5}
-                <input type="text" value={answer} onChange={(e) => handleInputChange(index, e.target.value)} />
+                <input className='answers-input' type="text" value={answer} onChange={(e) => handleInputChange(index, e.target.value)} />
             </div>
           ))}
           <button onClick={enter}>Sisesta</button>
-        </>
+        </div>
       ) : (
-        <>
+        <div className='questions'>
         <div>Mis oli sõna number {randomQuestion + 1}?</div>
         <input type="text" value={currentAnswer} onChange={(e) => setCurrentAnswer(e.target.value)} />
         <button onClick={handleQuestionSubmit}>Sisesta</button>
-        </>
+        </div>
       )}
     </div>
   );

@@ -22,9 +22,10 @@ function InterestingFact() {
     }
 
   return (
-    <div>
-        <button onClick={fetchNewFact}>Vajuta siia ja õpi</button>
+    <div className='interesting-game'>
+        <button className='interesting-game-button' onClick={fetchNewFact}>Vajuta siia ja õpi</button>
         <button onClick={fetchNewJoke}>Vajuta siia ja saad naerda</button>
+        <br /><br /><br />
         <div className='background'>
           <div className='text'>
           {isFact ? fact : joke}
