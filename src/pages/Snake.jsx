@@ -22,15 +22,19 @@ function Snake() {
         const handleKeyDown = (event) => {
             switch (event.key) {
                 case 'ArrowUp':
+                    case "w":
                     if (direction !== 'DOWN') setDirection('UP');
                     break
-                case 'ArrowDown':  
+                case 'ArrowDown': 
+                    case "s": 
                     if (direction !== 'UP') setDirection('DOWN');
                     break
-                case 'ArrowLeft':  
+                case 'ArrowLeft': 
+                    case "a": 
                     if (direction !== 'RIGHT') setDirection('LEFT');
                     break
-                case 'ArrowRight':  
+                case 'ArrowRight':
+                    case "d":  
                     if (direction !== 'LEFT') setDirection('RIGHT');
                     break
                 default:

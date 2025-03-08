@@ -1,7 +1,7 @@
 .word {
     margin-top: 150px;
     color: black;
-    font-size: 80px;
+    font-size: 60px;
 }
 
 .letters {
@@ -10,12 +10,12 @@
 }
 
 .letter-buttons {
-    font-size: 25px;
+    font-size: 20px;
     margin: 10px;
 }
 
 .letter-buttons:disabled {
-    font-size: 25px;
+    font-size: 20px;
     margin: 10px;
     background-color: gray;
     cursor:auto;

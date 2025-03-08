@@ -1,4 +1,5 @@
 import { useState } from "react"
+import "./blackjack.css"
 
 function BlackJack() {
   const [deck, setDeck] = useState([])
@@ -104,7 +105,7 @@ function BlackJack() {
   
 
   return (
-    <div>
+    <div className="black-jack">
       <div>Mängija kaardid: {playerHand.map(card => `${card.value}${card.suit}`).join(', ')}</div>
       <div>Diileri kaardid: {dealerHand.map(card => `${card.value}${card.suit}`).join(', ')}</div>
       <button onClick={hitPlayer}>Juurde</button><br />
