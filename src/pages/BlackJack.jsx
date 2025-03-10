@@ -43,7 +43,6 @@ function BlackJack() {
       setPlayerHand(newPlayerHand)
       setDeck([...deck])
 
-      
 
       const playerTotal = calculateHandValue(newPlayerHand)
       if (playerTotal > 21) {

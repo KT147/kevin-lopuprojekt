@@ -24,6 +24,23 @@
     overflow-wrap: break-word; 
     word-break: break-word;
     text-align: center;
+
+    transform: rotate(-360deg) scale(0); /* lisa algolek */
+    opacity: 0;
+    animation: spinIn 1s ease-out forwards;
+    animation-delay: 0.3s; /* kui tahad väikest viivitust */
+}
+
+
+@keyframes spinIn {
+    0% {
+        transform: rotate(-360deg) scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: rotate(0deg) scale(1);
+        opacity: 1;
+    }
 }
 
 .interesting-game {

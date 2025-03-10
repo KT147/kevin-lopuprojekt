@@ -27,7 +27,7 @@ function InterestingFact() {
         <button onClick={fetchNewJoke}>Vajuta siia ja saad naerda</button>
         <br /><br /><br />
         <div className='background'>
-          <div className='text'>
+          <div className='text' key={isFact ? fact : joke}>
           {isFact ? fact : joke}
           </div>
         </div>

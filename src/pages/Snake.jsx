@@ -56,11 +56,11 @@ function Snake() {
         context.clearRect(0,0, context.canvas.width, context.canvas.height)
         
         context.fillStyle = "green"
-        context.fillRect(food.x * 20, food.y * 20,20,20)
+        context.fillRect(food.x * 20, food.y * 20,   20,20)
 
         context.fillStyle = "blue"
         snake.forEach(segment => {
-            context.fillRect(segment.x * 20, segment.y * 20,20,20)
+            context.fillRect(segment.x * 20, segment.y * 20,   20,20)
             })
         }
         

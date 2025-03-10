@@ -26,7 +26,6 @@ function MemoryGame() {
         if (flippedCards.length === 2 || flippedCards.includes(index) || matchedCards.includes(index)) {
         return
     }
-    
     const newFlippedCards = [...flippedCards, index]
         setFlippedCards(newFlippedCards)
     }

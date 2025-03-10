@@ -1,5 +1,6 @@
 .game {
-    background-color: yellowgreen;
+    background-image: url("/rps-backround.jpg");
+    background-size: cover;
     border-radius: 2%;
     position: relative;
     margin-top: 130px;

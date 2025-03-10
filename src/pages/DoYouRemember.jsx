@@ -5,13 +5,14 @@ function DoYouRemember() {
 
     const [started, setStarted] = useState(false)
 
+    const [isQuestionAsked, setIsQuestionAsked] = useState(false)
+
     const [answers, setAnswers] = useState(["", "", "", "", ""])
 
     const [round, setRound] = useState(1)
 
     const [randomQuestion, setRandomQuestion] = useState(null)
     const [currentAnswer, setCurrentAnswer] = useState("")
-    const [isQuestionAsked, setIsQuestionAsked] = useState(false)
 
     const startTheGame = () => {
        setStarted(true)
@@ -36,6 +37,7 @@ function DoYouRemember() {
         })
         setAnswers(['', '', '', '', ''])
 
+        // kontrollküsimuste jaoks
         const totalWords = round * 5
         const randomIndex = Math.floor(Math.random() * totalWords)
         setRandomQuestion(randomIndex)

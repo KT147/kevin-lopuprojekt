@@ -52,18 +52,53 @@
     background-color: rgb(134, 219, 219);
 }
 
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
 .message {
-    background-color: rgb(81, 199, 199);
+    position: relative;
+    z-index: 1;
     font-size: 18px;
     width: 500px;
-    border-radius: 5px;
+    border-radius: 10px;
     text-align: center;
-    padding: 10px;
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center; 
     color: black;
+    background-color: rgb(134, 219, 219);
+    overflow: hidden;
 }
+
+.message::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 5px;
+    border-radius: 10px;
+    background: conic-gradient(from var(--angle), red, blue, red);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    animation: spin 1s linear infinite;
+    z-index: -1;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}
+
 
 .message-wrapper {
     display: flex;
